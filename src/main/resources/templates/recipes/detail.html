@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Recipe Details</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+  <!-- Recipe Title -->
+  <h1 class="recipe-title" th:text="${recipe.title}"></h1>
+  <p class="recipe-description" th:text="${recipe.description}"></p>
+
+  <!-- Ingredients and Steps -->
+  <div class="recipe-details">
+    <p><strong>Ingredients:</strong> <span th:text="${recipe.ingredients}"></span></p>
+    <p><strong>Steps:</strong> <span th:text="${recipe.steps}"></span></p>
+  </div>
+
+  <!-- Comments Section -->
+  <div class="comments-section">
+    <h2>Comments</h2>
+    <ul class="comments-list">
+      <li class="comment-item" th:each="comment : ${comments}">
+        <p class="comment-username" th:text="${comment.username}"></p>
+        <p class="comment-text" th:text="${comment.text}"></p>
+        <p><strong>Rating:</strong> <span class="comment-rating" th:text="${comment.rating}"></span>/5</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Add Comment Section -->
+  <div class="add-comment-section">
+    <h2>Add a Comment</h2>
+    <form class="comment-form" th:action="@{/recipes/{id}/comment(id=${recipe.id})}" th:object="${newComment}" method="post">
+      <label for="text">Comment:</label>
+      <textarea id="text" th:field="*{text}" required></textarea>
+      <br>
+      <label for="rating">Rating:</label>
+      <input id="rating" th:field="*{rating}" type="number" min="1" max="5" required>
+      <br>
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+
+  <!-- Back to Recipes -->
+  <a class="back-link" th:href="@{/recipes}">Back to Recipes</a>
+</div>
+</body>
+</html>

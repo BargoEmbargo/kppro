@@ -1,0 +1,446 @@
+/* General Reset */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #4CAF50;
+}
+
+/* Filter Form */
+.filter-form {
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-form label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.filter-form select, .filter-form button {
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.filter-form button {
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.filter-form button:hover {
+    background-color: #45a049;
+}
+
+/* Recipes Section */
+.recipes-container, .categories-container {
+    padding: 20px 10px;
+}
+
+.recipe-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.recipe-card p {
+    margin: 8px 0;
+    font-size: 1em;
+}
+
+.recipe-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.recipe-card a:hover {
+    background-color: #45a049;
+}
+
+/* Logout Button */
+.logout-button {
+    display: block;
+    text-align: center;
+    margin: 30px auto;
+    color: #fff;
+    background-color: #4CAF50;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 150px;
+    font-size: 1em;
+}
+
+.logout-button:hover {
+    background-color: #45a049;
+}
+/* Center and Style Recipe Titles */
+.recipe-card h2 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.8em;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Adjust Category Titles */
+.category-group h3 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+/* Category Section Styling */
+.categories-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+}
+
+.categories-container h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.category-group {
+    margin: 20px 0;
+}
+
+.category-group h3 {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 10px 0;
+    color: #4CAF50;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.category-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-group li {
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-group li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Section */
+/* Header Section */
+/* Header Section */
+.main-header {
+    background-color: #4CAF50; /* Green background */
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center all content */
+    align-items: center; /* Vertically align */
+    color: white; /* Set default text color to white */
+    position: relative; /* Enable positioning for the logout button */
+}
+
+/* Title Styling */
+.main-title {
+    margin: 0;
+    font-size: 2em;
+    color: white; /* Ensure title text is visible */
+    text-align: center; /* Center text */
+}
+
+/* Logout Button Styling */
+.logout-button {
+    position: absolute; /* Position relative to the header */
+    right: 20px; /* Align to the right edge with padding */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the button */
+    background-color: white;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #45a049;
+    color: white;
+    border: 1px solid white;
+}
+
+/* edit*\
+
+ */
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Recipe Title */
+.recipe-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* Recipe Description */
+.recipe-description {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Recipe Details */
+.recipe-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Comments Section */
+.comments-section h2 {
+    font-size: 1.8em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.comment-text {
+    margin: 10px 0;
+    color: #333;
+}
+
+.comment-rating {
+    color: #ff9800;
+}
+
+/* Add Comment Section */
+.add-comment-section {
+    margin-top: 20px;
+}
+
+.add-comment-section h2 {
+    font-size: 1.8em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.comment-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.comment-form textarea,
+.comment-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.comment-form .submit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.comment-form .submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Back to Recipes */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.login-page {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-page .login-container {
+    background-color: white;
+    padding: 30px; /* Increased padding for a more spacious feel */
+    border-radius: 15px; /* Slightly more rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for better emphasis */
+    max-width: 400px;
+    width: 90%; /* Slightly more responsive for smaller screens */
+    text-align: center;
+}
+
+.login-page .login-title {
+    font-size: 28px; /* Increased size for a bolder title */
+    font-weight: bold;
+    color: #4CAF50; /* Emphasize the title color */
+    margin-bottom: 25px; /* Add more spacing below the title */
+}
+
+.login-page .form-group {
+    margin-bottom: 20px; /* Adjust spacing between form elements */
+    text-align: left; /* Keep labels aligned to the left */
+}
+
+.login-page .form-group label {
+    display: block;
+    margin-bottom: 8px; /* Add more space between label and input */
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-page .form-group input {
+    width: 100%;
+    padding: 12px; /* More padding for input fields */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded corners for inputs */
+    font-size: 14px;
+    box-sizing: border-box; /* Ensure padding doesn't break layout */
+}
+
+.login-page .form-group input:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    outline: none;
+}
+
+.login-page .login-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Larger button */
+    border-radius: 8px; /* Rounded button */
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-page .login-button:hover {
+    background-color: #45a049;
+}
+
+.login-page .form-messages {
+    margin-top: 15px; /* Add some spacing above messages */
+}
+
+.login-page .form-messages .error-message {
+    color: red;
+    font-size: 14px;
+}
+
+.login-page .form-messages .success-message {
+    color: green;
+    font-size: 14px;
+}
+
+
+
+
+

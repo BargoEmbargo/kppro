@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Edit Recipe</title>
+</head>
+<body>
+<h1>Edit Recipe</h1>
+<form th:action="@{/recipes/update}" th:object="${recipe}" method="post">
+  <input type="hidden" th:field="*{id}">
+  <label for="title">Title:</label>
+  <input id="title" th:field="*{title}" type="text" required>
+  <br>
+  <label for="description">Description:</label>
+  <textarea id="description" th:field="*{description}" required></textarea>
+  <br>
+  <label for="ingredients">Ingredients:</label>
+  <textarea id="ingredients" th:field="*{ingredients}" required></textarea>
+  <br>
+  <label for="steps">Steps:</label>
+  <textarea id="steps" th:field="*{steps}" required></textarea>
+  <br>
+  <button type="submit">Update Recipe</button>
+</form>
+<a th:href="@{/admin/dashboard}">Back to Dashboard</a>
+</body>
+</html>

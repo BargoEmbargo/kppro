@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Manage Cuisines</title>
+</head>
+<body>
+<h1>Manage Cuisines</h1>
+
+<h2>Add Cuisine</h2>
+<form th:action="@{/admin/cuisines/add}" th:object="${newCuisine}" method="post">
+  <label for="name">Cuisine Name:</label>
+  <input id="name" th:field="*{name}" type="text" required>
+  <label for="description">Description:</label>
+  <textarea id="description" th:field="*{description}" required></textarea>
+  <button type="submit">Add Cuisine</button>
+</form>
+
+<h2>Existing Cuisines</h2>
+<ul>
+  <li th:each="cuisine : ${cuisines}">
+    <span th:text="${cuisine.name}"></span> - <span th:text="${cuisine.description}"></span>
+    <a th:href="@{/admin/cuisines/delete/{id}(id=${cuisine.id})}">Delete</a>
+  </li>
+</ul>
+
+<a th:href="@{/admin/dashboard}">Back to Dashboard</a>
+</body>
+</html>
